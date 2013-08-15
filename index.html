@@ -1,0 +1,59 @@
+<!doctpye html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Zwischenzeit-Berechnung</title>
+		
+		<link type="text/css" rel="stylesheet" href="vendor/jquery/mobile/jquery.mobile-1.3.2.min.css">
+		<style type="text/css">
+		.pull-right {
+			text-align: right !important;
+		}
+		</style>
+		
+		<script type="text/javascript" src="vendor/jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="vendor/jquery/mobile/jquery.mobile-1.3.2.min.js"></script>
+		<script type="text/javascript" src="static/js/main.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			
+			<!-- header -->
+			<div data-role="header" data-position="fixed">
+				<h1>Zwischenzeit</h1>
+			</div>
+			<!-- content -->
+			<div data-role="content">
+	    		<form>
+		    		<fieldset data-role="controlgroup" data-type="horizontal">
+					    <legend>Art:</legend>
+					    <input name="kind" id="kindA" value="d" checked="checked" type="radio">
+					    <label for="kindA">Distanz</label>
+					    <input name="kind" id="kindB" value="t" type="radio">
+					    <label for="kindB">Zeit</label>
+					</fieldset>
+					<br>
+				    <label for="distance">Distanz:</label>
+				    <input type="number" pattern="[0-9:,.]*" name="distance">
+				    <br>
+				    <label for="time">Zeit:</label>
+				    <input type="number" pattern="[0-9:,.]*" name="time">
+				    <br>
+				    <label for="time">Zwischenwert:</label>
+				    <input type="number" pattern="[0-9:,.]*" name="split">
+				    <br>
+				    <a href="" type="button" data-theme="b" onclick="submitForm()">Berechnen</a>
+		    	</form>
+		    	<div id="resultTable">
+		    		<div id="tableHead" class="ui-grid-b">
+		    		</div>
+		    		
+		    		<div id="tableBody" class="ui-grid-b">
+		    		</div>
+		    	</div>
+	    	</div>
+			<!-- footer -->
+		</div>
+	</body>
+</html>
